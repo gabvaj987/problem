@@ -10,4 +10,11 @@ public class LinkedListCircleTest {
 	  //THEN
 	  new LinkedListCircle();
   }
+  @Test
+  public void callFind() {
+	  //GIVEN
+	  //WHEN
+	  //THEN
+	  new LinkedListCircle().find();
+  }
 }
