@@ -17,8 +17,8 @@ public class LinkedListCircle {
 		if (first == null) {
 			throw new IllegalArgumentException("first element should not be null");
 		}
-		Link oneStep = first;
-		Link twoSteps = first.getNext(); // LOCK
+		Link oneStep = first; // LOCK
+		Link twoSteps = oneStep.getNext();
 		while (oneStep != twoSteps) {
 			if (twoSteps == null) {
 				return false;
