@@ -20,10 +20,10 @@ public class LinkedListCircle {
 		Link oneStep = first; // LOCK
 		Link twoSteps = oneStep.getNext();
 		while (oneStep != twoSteps) {
-			if (twoSteps == null || twoSteps.getNext() == null) {
+			if (twoSteps == null || (twoSteps=twoSteps.getNext()) == null) {
 				return false;
 			}
-			twoSteps = twoSteps.getNext().getNext(); // LOCK
+			twoSteps = twoSteps.getNext(); // LOCK
 			oneStep = oneStep.getNext();
 		}
 		return true;

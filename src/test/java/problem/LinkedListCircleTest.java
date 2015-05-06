@@ -32,7 +32,7 @@ public class LinkedListCircleTest {
 		assertFalse(returned);
 	}
 	
-	@Test(enabled=false)
+	@Test
 	public void callFindOneLinkCircledReturnsTrue() {
 		// GIVEN
 		Link link = new Link();
@@ -43,7 +43,7 @@ public class LinkedListCircleTest {
 		assertTrue(returned);
 	}
 	
-	@Test(enabled=false)
+	@Test
 	public void callFindTwoLinksNoCircleReturnsFalse() {
 		// GIVEN
 		Link link1 = new Link(new Link());
@@ -53,7 +53,7 @@ public class LinkedListCircleTest {
 		assertFalse(returned);
 	}
 
-	@Test(enabled=false)
+	@Test
 	public void callFindTwoLinksCircledReturnsTrue() {
 		// GIVEN
 		Link link2 = new Link();
@@ -65,7 +65,7 @@ public class LinkedListCircleTest {
 		assertTrue(returned);
 	}
 	
-	@Test(enabled=false)
+	@Test
 	public void callFindThreeLinksNoCircleReturnsFalse() {
 		// GIVEN
 		Link link1 = new Link(new Link(new Link()));
@@ -110,7 +110,7 @@ public class LinkedListCircleTest {
 		assertFalse(returned);
 	}
 
-	@Test(enabled=false)
+	@Test
 	public void callFindFourLinksCircledReturnsTrue() {
 		// GIVEN
 		Link link4 = new Link();
