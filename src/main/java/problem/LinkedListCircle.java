@@ -1,15 +1,16 @@
 package problem;
 
 /**
- * Can be used for checking the existence of a loop in a one way linked list. 
+ * Can be used for checking the existence of a loop in a one way linked list.
  */
 public class LinkedListCircle {
 
 	/**
 	 * This function checks the given linked list whether there is a loop in it.
 	 * 
-	 * @param first the first link in the linked list to be tested. 
-	 * @return true if the linked list has a loop, false if there is an end element in the linked list that's next reference points to null. 
+	 * @param first the first link in the linked list to be tested.
+	 * @return true if the linked list has a loop, false if there is an end
+	 *         element in the linked list that's next reference points to null.
 	 * @throws IllegalArgumentException if the given first link is null
 	 */
 	public boolean hasCircle(Link first) {
