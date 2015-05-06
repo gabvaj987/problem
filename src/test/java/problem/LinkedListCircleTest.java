@@ -18,7 +18,7 @@ public class LinkedListCircleTest {
 	public void callFindNullGivenThrowsIllegalArgumentException() {
 		// GIVEN
 		// WHEN
-		underTest.find(null);
+		underTest.hasCircle(null);
 		// THEN
 	}
 	
@@ -27,7 +27,7 @@ public class LinkedListCircleTest {
 		// GIVEN
 		Link link = new Link();
 		// WHEN
-		boolean returned = underTest.find(link);
+		boolean returned = underTest.hasCircle(link);
 		// THEN
 		assertFalse(returned);
 	}
@@ -38,7 +38,7 @@ public class LinkedListCircleTest {
 		Link link = new Link();
 		link.setNext(link);
 		// WHEN
-		boolean returned = underTest.find(link);
+		boolean returned = underTest.hasCircle(link);
 		// THEN
 		assertTrue(returned);
 	}
@@ -50,7 +50,7 @@ public class LinkedListCircleTest {
 		Link link2 = new Link();
 		link1.setNext(link2);
 		// WHEN
-		boolean returned = underTest.find(link1);
+		boolean returned = underTest.hasCircle(link1);
 		// THEN
 		assertFalse(returned);
 	}
@@ -63,7 +63,7 @@ public class LinkedListCircleTest {
 		link1.setNext(link2);
 		link2.setNext(link1);
 		// WHEN
-		boolean returned = underTest.find(link1);
+		boolean returned = underTest.hasCircle(link1);
 		// THEN
 		assertTrue(returned);
 	}
@@ -77,7 +77,7 @@ public class LinkedListCircleTest {
 		link1.setNext(link2);
 		link2.setNext(link3);
 		// WHEN
-		boolean returned = underTest.find(link1);
+		boolean returned = underTest.hasCircle(link1);
 		// THEN
 		assertFalse(returned);
 	}
@@ -92,7 +92,7 @@ public class LinkedListCircleTest {
 		link2.setNext(link3);
 		link3.setNext(link1);
 		// WHEN
-		boolean returned = underTest.find(link1);
+		boolean returned = underTest.hasCircle(link1);
 		// THEN
 		assertTrue(returned);
 	}
@@ -107,7 +107,7 @@ public class LinkedListCircleTest {
 		link2.setNext(link3);
 		link3.setNext(link2);
 		// WHEN
-		boolean returned = underTest.find(link1);
+		boolean returned = underTest.hasCircle(link1);
 		// THEN
 		assertTrue(returned);
 	}
@@ -123,7 +123,7 @@ public class LinkedListCircleTest {
 		link2.setNext(link3);
 		link3.setNext(link4);
 		// WHEN
-		boolean returned = underTest.find(link1);
+		boolean returned = underTest.hasCircle(link1);
 		// THEN
 		assertFalse(returned);
 	}
@@ -140,7 +140,7 @@ public class LinkedListCircleTest {
 		link3.setNext(link4);
 		link4.setNext(link1);
 		// WHEN
-		boolean returned = underTest.find(link1);
+		boolean returned = underTest.hasCircle(link1);
 		// THEN
 		assertTrue(returned);
 	}
