@@ -6,7 +6,12 @@ public class LinkedListCircle {
 		if(first==null){
 			throw new IllegalArgumentException("first element should not be null");
 		}
-		if(first.getNext()==null){
+		Link next = first.getNext();
+		if(next==null){
+			return false;
+		}
+		Link secondNext = next.getNext();
+		if(secondNext==null){
 			return false;
 		}
 		return true;

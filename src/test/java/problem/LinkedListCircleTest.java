@@ -42,4 +42,29 @@ public class LinkedListCircleTest {
 		// THEN
 		assertTrue(returned);
 	}
+	
+	@Test
+	public void callFindTwoLinksNoCircleReturnsFalse() {
+		// GIVEN
+		Link link1 = new Link();
+		Link link2 = new Link();
+		link1.setNext(link2);
+		// WHEN
+		boolean returned = underTest.find(link1);
+		// THEN
+		assertFalse(returned);
+	}
+
+	@Test
+	public void callFindTwoLinksCircledReturnsTrue() {
+		// GIVEN
+		Link link1 = new Link();
+		Link link2 = new Link();
+		link1.setNext(link2);
+		link2.setNext(link1);
+		// WHEN
+		boolean returned = underTest.find(link1);
+		// THEN
+		assertTrue(returned);
+	}
 }
