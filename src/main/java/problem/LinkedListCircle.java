@@ -17,7 +17,7 @@ public class LinkedListCircle {
 			throw new IllegalArgumentException("first element should not be null");
 		}
 		Link oneStep = first;
-		Link twoSteps = oneStep.getNext();
+		Link twoSteps = first.getNext(); // LOCK
 		while (oneStep != twoSteps) {
 			if (twoSteps == null) {
 				return false;
@@ -26,7 +26,7 @@ public class LinkedListCircle {
 			if (twoSteps == null) {
 				return false;
 			}
-			twoSteps = twoSteps.getNext();
+			twoSteps = twoSteps.getNext(); // LOCK
 			oneStep = oneStep.getNext();
 		}
 		return true;
