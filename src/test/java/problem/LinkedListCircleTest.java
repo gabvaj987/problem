@@ -96,4 +96,52 @@ public class LinkedListCircleTest {
 		// THEN
 		assertTrue(returned);
 	}
+	
+	@Test
+	public void callFindThreeLinksCircledIntoMiddleReturnsTrue() {
+		// GIVEN
+		Link link1 = new Link();
+		Link link2 = new Link();
+		Link link3 = new Link();
+		link1.setNext(link2);
+		link2.setNext(link3);
+		link3.setNext(link2);
+		// WHEN
+		boolean returned = underTest.find(link1);
+		// THEN
+		assertTrue(returned);
+	}
+	
+	@Test
+	public void callFindFourLinksNoCircleReturnsFalse() {
+		// GIVEN
+		Link link1 = new Link();
+		Link link2 = new Link();
+		Link link3 = new Link();
+		Link link4 = new Link();
+		link1.setNext(link2);
+		link2.setNext(link3);
+		link3.setNext(link4);
+		// WHEN
+		boolean returned = underTest.find(link1);
+		// THEN
+		assertFalse(returned);
+	}
+
+	@Test
+	public void callFindFourLinksCircledReturnsTrue() {
+		// GIVEN
+		Link link1 = new Link();
+		Link link2 = new Link();
+		Link link3 = new Link();
+		Link link4 = new Link();
+		link1.setNext(link2);
+		link2.setNext(link3);
+		link3.setNext(link4);
+		link4.setNext(link1);
+		// WHEN
+		boolean returned = underTest.find(link1);
+		// THEN
+		assertTrue(returned);
+	}
 }
