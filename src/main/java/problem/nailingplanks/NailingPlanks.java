@@ -13,7 +13,7 @@ public class NailingPlanks {
 		NavigableSet<Integer> usedNails = new TreeSet<Integer>();
 		for (int i = 0; i < a.length; i++) {
 			Integer nailCandidate = usedNails.ceiling(a[i]);
-			boolean nailFound = nailCandidate != null ? nailCandidate < b[i] : false;
+			boolean nailFound = nailCandidate != null ? nailCandidate <= b[i] : false;
 			if (!nailFound) {
 				int nailToAdd = 0;
 				while (nailToAdd < a[i] || b[i] < nailToAdd) {

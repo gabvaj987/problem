@@ -32,4 +32,9 @@ public class NailingPlanksTest {
 		int result = underTest.nailsNeeded(new int[]{1,4,5,8,1,11},new int[]{4,5,9,10,2,11},new int[]{4,6,7,10,2});
 		assertEquals(result,-1);
 	}
+	@Test
+	public void callWithCasePlanksNotInOrder(){
+		int result = underTest.nailsNeeded(new int[]{5,3},new int[]{7,4},new int[]{4,5,6,7});
+		assertEquals(result,2);
+	}
 }
