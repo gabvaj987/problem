@@ -12,16 +12,15 @@ public class NailingPlanks {
 		int nailCount = 0;
 		NavigableSet<Integer> usedNails = new TreeSet<Integer>();
 		for (int i = 0; i < a.length; i++) {
-			Integer nailCandidate = usedNails.ceiling(a[i]);
-			boolean nailFound = nailCandidate != null ? nailCandidate <= b[i] : false;
-			if (!nailFound) {
-				int nailToAdd = 0;
-				while (nailToAdd < a[i] || b[i] < nailToAdd) {
-					if(nailCount==c.length){
+			Integer nailLeftBound = usedNails.ceiling(a[i]);
+			if (nailLeftBound == null || b[i] < nailLeftBound) {
+				int nailAdded = 0;
+				while (nailAdded < a[i] || b[i] < nailAdded) {
+					if (nailCount == c.length) {
 						return -1;
 					}
-					nailToAdd = c[nailCount++];
-					usedNails.add(nailToAdd);
+					nailAdded = c[nailCount++];
+					usedNails.add(nailAdded);
 				}
 			}
 		}
