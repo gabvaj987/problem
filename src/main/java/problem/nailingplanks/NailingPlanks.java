@@ -13,7 +13,7 @@ public class NailingPlanks {
 		for (int i = 0; i < a.length; i++) {
 			Integer nailLeftBound = usedNails.ceiling(a[i]);
 			if (nailLeftBound == null || b[i] < nailLeftBound) {
-				int nailAdded = 0;
+				int nailAdded = 0; // LOCK
 				while (nailAdded < a[i] || b[i] < nailAdded) {
 					if (usedNails.size() == c.length) {
 						return -1;
