@@ -1,4 +1,4 @@
-package problem;
+package problem.linkedlistcircle;
 
 /**
  * Represents one link in a linked list.

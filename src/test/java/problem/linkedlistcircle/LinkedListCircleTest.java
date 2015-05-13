@@ -1,4 +1,4 @@
-package problem;
+package problem.linkedlistcircle;
 
 import static org.testng.AssertJUnit.assertTrue;
 import static org.testng.AssertJUnit.assertFalse;

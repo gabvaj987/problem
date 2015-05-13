@@ -1,4 +1,4 @@
-package problem;
+package problem.linkedlistcircle;
 
 /**
  * Can be used for checking the existence of a loop in a one way linked list.
