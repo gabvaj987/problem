@@ -9,21 +9,20 @@ public class NailingPlanks {
 		if (a == null || b == null || c == null) {
 			throw new IllegalArgumentException();
 		}
-		int nailCount = 0;
 		NavigableSet<Integer> usedNails = new TreeSet<Integer>();
 		for (int i = 0; i < a.length; i++) {
 			Integer nailLeftBound = usedNails.ceiling(a[i]);
 			if (nailLeftBound == null || b[i] < nailLeftBound) {
 				int nailAdded = 0;
 				while (nailAdded < a[i] || b[i] < nailAdded) {
-					if (nailCount == c.length) {
+					if (usedNails.size() == c.length) {
 						return -1;
 					}
-					nailAdded = c[nailCount++];
+					nailAdded = c[usedNails.size()];
 					usedNails.add(nailAdded);
 				}
 			}
 		}
-		return nailCount;
+		return usedNails.size();
 	}
 }
