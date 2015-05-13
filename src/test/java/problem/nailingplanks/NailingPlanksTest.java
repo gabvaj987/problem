@@ -27,4 +27,9 @@ public class NailingPlanksTest {
 		int result = underTest.nailsNeeded(new int[]{1,4,5,8,1},new int[]{4,5,9,10,2},new int[]{4,6,7,10,2});
 		assertEquals(result,5);
 	}
+	@Test
+	public void callWithCaseNotEnoughNails(){
+		int result = underTest.nailsNeeded(new int[]{1,4,5,8,1,11},new int[]{4,5,9,10,2,11},new int[]{4,6,7,10,2});
+		assertEquals(result,-1);
+	}
 }
